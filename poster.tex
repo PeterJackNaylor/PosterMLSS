@@ -1,3 +1,4 @@
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % a0poster Portrait Poster
 % LaTeX Template
@@ -62,9 +63,11 @@
 \begin{minipage}[b]{0.75\linewidth}
 \veryHuge \color{NavyBlue} \textbf{Finding key biological features for cancer diagnosis from histopathology slides
 } \color{Black}\\ % Title
-\Huge\textit{Cell segmentation within histopathological slides}\\[2cm] % Subtitle
+\Huge\textit{Cell segmentation within histopathological slides by
+  supervised learning}\\[2cm] % Subtitle
 \huge \textbf{Naylor Peter}\\[0.5cm] % Author(s)
-\huge PSL - Mines Paristech, Institut Curie and Inserm\\[0.4cm] % University/organization
+\huge (1) MINES Paristech, PSL Research University, (2) Institut
+Curie, (3) Inserm U900\\[0.4cm] % University/organization
 \Large \texttt{peter.naylor@mines-paristech.fr} \\
 \end{minipage}
 %
@@ -89,7 +92,23 @@
 
 \section*{Introduction}
 
-Uncovering information from histopathology image data is a difficult task and is mostly unused in cancer research. This data corresponds to thin slices of the tumor and of the surrounding tissue. Histopathology slides can thus be very informative of the cancer subtype and/or of how the patient's immune system is reacting to the cancer. Our ultimate goal would be to quantify, via the extraction of biological features, a patient histopathology data. Biological feature are features that have a true biological meaning, like proportion of cancerous cell, normal cells, etc. See \cite{yuan2012quantitative} for more insight. I will introduce the data and the methods for segmentation.
+Uncovering information from histopathology image data is a difficult
+task and is mostly unused in cancer research. Histopathology data
+corresponds to thin slices of the tumor and of the surrounding
+tissue. Such data are very informative about the morphological, phenotypic and
+spatial features of the cancer and its microenvironment. For instance,
+they can tell us how the patient's immune system is reacting
+to the cancer. Our ultimate goal would be to quantify, via the
+extraction of biological features, a patient histopathology
+data. We understand by biological feature those features that have a true biological
+meaning, like proportion of cancerous cell, normal cells, etc. See
+\cite{yuan2012quantitative} for more insight. One crucial part for a
+workflow that extracts biologically meaningful features is the
+detection and classification of
+cell nuclei, as this allows to assess the spatial distribution of
+different cell types in the tissue, a key step in formalizing the
+information contained in this data. Here, I will introduce the
+data and the methods for segmentation I am currently working on. 
 
 
 
@@ -108,8 +127,16 @@ Uncovering information from histopathology image data is a difficult task and is
 
 \section*{Methods}
 
-Our strategy to identify the important features is to first segment the important elements in histopathology slides (such as cells, tumor and stromal tissue, necrotic regions, etc.), second to define physiologically interpretable features for each of these elements and third to build a prediction model in order to assess the importance of each of these features. However, segmentation is the bottleneck of this work and his the main focus in the poster.
-We propose a segmentation method based on fully convolutional network (FCN)  architectures for image segmentation that rely on standard convolutionnal neural network (CNN).
+Our strategy to identify the important biological features is to first
+segment the important elements in histopathology slides (such as
+cells, tumor and stromal tissue, necrotic regions, etc.), second to
+define physiologically interpretable features for each of these
+elements and third to build a prediction model in order to assess the
+importance of each of these features. However, segmentation is the
+bottleneck of this work and his the main focus in the poster. 
+We propose a segmentation method based on fully convolutional network
+(FCN)  architectures for image segmentation that rely on standard
+convolutionnal neural network (CNN). 
 
 \color{DarkSlateGray} % Set the color back to DarkSlateGray for the rest of the content
 
@@ -117,10 +144,14 @@ We propose a segmentation method based on fully convolutional network (FCN)  arc
 
 \begin{enumerate}
 \item Unused data in cancer research.
-\item Residual Cancer Burden Calculator, a tumor grading, is based on the content of histopathology slides, however pathologist only have a limited time per slide.
+\item Residual Cancer Burden Calculator, a tumor grading scheme, is
+  based on the content of histopathology slides, however pathologist
+  only have a limited time per slide and never assess the entire slide.
 \item Reproducibility of the RCBC grading, it can vary between hospitals.
-\item Defining biology driven features will interpretability for predicting clinical variables, such as outcome, subtype or response to treatment.
-\item Allow us to investigate the link between genomic and transcriptomic features.
+\item Defining biology driven features will guarantee interpretability for predicting clinical variables, such as outcome, subtype or response to treatment.
+\item Allow us to investigate the link between histopathology features
+  on the one side and genomic and transcriptomic features on the other
+  side.
 \end{enumerate}
 %Uncovering information from histopathology slides is a difficult task as one uncompressed slide can easily be over 65 GB (200000 x 100000 pixels). 
 %Identifying the important features from such a huge amount of data, is a difficult endeavour, which requires the use of prior knowledge brought in by pathologists. %Supervised learning is certainly the most powerful strategy for image segmentation for this type of data. In order to segment the important structures in these images we propose a method based on fully convolutional network  architectures for image segmentation.
@@ -161,7 +192,8 @@ We propose a segmentation method based on fully convolutional network (FCN)  arc
 \item {\em Projection artefacts}: a slice is actually a 3D slice, we can have overlapping cells / nuclei
   and other artefacts.
 \item {\em No explicit formalization of information}:
-  No clear descriptions of the objects we are trying to identify.  
+  No clear descriptions of the objects we are trying to identify.
+  {\red What do you mean by this? }
 \end{enumerate}
 
 \section*{Manual annotation of histopathology slides}
