@@ -46,6 +46,8 @@
 \def\endsubfigure{\endminipage
 \let\caption=\oldcaption}
 
+
+\usepackage[numbers]{natbib}
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -57,7 +59,7 @@
 % The second is 25% wide and houses a logo for your university/organization or a photo of you
 % The widths of these boxes can be easily edited to accommodate your content as you see fit
 
-\begin{minipage}[b]{0.6\linewidth}
+\begin{minipage}[b]{0.75\linewidth}
 \veryHuge \color{NavyBlue} \textbf{Finding key biological features for cancer diagnosis from histopathology slides
 } \color{Black}\\ % Title
 \Huge\textit{Cell segmentation within histopathological slides}\\[2cm] % Subtitle
@@ -66,7 +68,7 @@
 \Large \texttt{peter.naylor@mines-paristech.fr} \\
 \end{minipage}
 %
-\begin{minipage}[b]{0.4\linewidth}
+\begin{minipage}[b]{0.3\linewidth}
 %\includegraphics[width=20cm]{logo.png}\\
 \includegraphics[width=0.3\textwidth]{Mines_ParisTech.png} 
 \includegraphics[width=0.3\textwidth]{CURIE.jpg}
@@ -138,7 +140,7 @@ We propose a method based on fully convolutional network  architectures for imag
 
   \includegraphics[width = 0.5\textwidth]{ComputerVision.png}
 
-\section*{Uncovering information is a difficult task}
+\section*{Uncovering information from histopathology data is a difficult task}
 
 \begin{center}
 
@@ -198,9 +200,10 @@ with information from the first layers.
 
 \section*{Results}
 
-The fully convolutionnal network is fined tuned with a lot of use of data augmentation: rotation, flips, blurring and elastic deformation.
-The size of the input images can be of size $512\times512$ or of size $256\times256$.  Several metrics were kept, especially: mean accuracy, intersection over union, the Jaccard Index, recall and precision.
-Finally training was performed on $21$ images and test on $5$ images across $6$ patients. $7$ validation images were used for reporting the validation scores, these validation images were provided by one patient.
+The fully convolutionnal network is fined tuned and helped with the use of data augmentation: rotation, flips, blurring and elastic deformation.
+The size of the input images can be of $512\times512$ pixels or of 
+ $256\times256$ pixels.  Several metrics were kept, especially: mean accuracy, intersection over union, the Jaccard Index, recall and precision.
+Finally, training was performed on $21$ images and test on $5$ images across $6$ patients. $7$ validation images were used for reporting the validation scores, these validation images were provided by one patient.
 \begin{center}
 \begin{tabular}{l l l l l l}
 \toprule
@@ -220,11 +223,6 @@ Finally training was performed on $21$ images and test on $5$ images across $6$ 
 %----------------------------------------------------------------------------------------
 
 
-\section*{Conclusions}
-
-Mediocre results with only 33 annotated patches of whole slide tumors.
-The segmentation method is not precise enough. Dense cell region will lead to connexe regions.
-
 %----------------------------------------------------------------------------------------
 %	FORTHCOMING RESEARCH
 %----------------------------------------------------------------------------------------
@@ -242,7 +240,7 @@ The segmentation method is not precise enough. Dense cell region will lead to co
 
 \color{DarkSlateGray} % Set the color back to DarkSlateGray for the rest of the content
 
-\bibliographystyle{plainnat}
+\bibliographystyle{plain}
 %\bibliographystyle{abbrvnat}
 \bibliography{biblio.bib} % Use the example bibliography file sample.bib
 

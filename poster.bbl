@@ -1,0 +1,37 @@
+\begin{thebibliography}{1}
+
+\bibitem{long2015fcn}
+Jonathan Long, Evan Shelhamer, and Trevor Darrell.
+\newblock Fully convolutional networks for semantic segmentation.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 3431--3440, 2015.
+
+\bibitem{ranefall2016fast}
+Petter Ranefall, Sajith~Kecheril Sadanandan, and Carolina W{\"a}hlby.
+\newblock Fast adaptive local thresholding based on ellipse fit.
+\newblock In {\em International Symposium on Biomedical Imaging (ISBI'16),
+  Prague, Czech Republic, April 13-16, 2016}, 2016.
+
+\bibitem{UNet}
+Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
+\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock In {\em Medical Image Computing and Computer-Assisted
+  Intervention--MICCAI 2015}, pages 234--241. Springer, 2015.
+
+\bibitem{deconvolution}
+Arnout~C Ruifrok and Dennis~A Johnston.
+\newblock Quantification of histochemical staining by color deconvolution.
+\newblock {\em Analytical and quantitative cytology and histology/the
+  International Academy of Cytology [and] American Society of Cytology},
+  23(4):291--299, 2001.
+
+\bibitem{yuan2012quantitative}
+Yinyin Yuan, Henrik Failmezger, Oscar~M Rueda, H~Raza Ali, Stefan Gr{\"a}f,
+  Suet-Feung Chin, Roland~F Schwarz, Christina Curtis, Mark~J Dunning, Helen
+  Bardwell, et~al.
+\newblock Quantitative image analysis of cellular heterogeneity in breast
+  tumors complements genomic profiling.
+\newblock {\em Science translational medicine}, 4(157):157ra143--157ra143,
+  2012.
+
+\end{thebibliography}
